@@ -10,6 +10,6 @@ router.get("/", arbitreLogic.getAll);
 router.post("/",authenticate, authorize("consultation", "admin"), validationArbitre, arbitreLogic.createArbitre);
 router.get("/:id", arbitreLogic.getArbitreId)
 router.put("/:id",authenticate, authorize("consultation", "admin"), validationArbitre, arbitreLogic.updateArbitre)
-router.delete("/:id",authenticate,authorize("admin"), arbitreLogic.deleteArbitre)
+router.delete("/:id",authenticate,authorize("admin"), arbitreLogic.deleteArbitre )
 
 export default router;
